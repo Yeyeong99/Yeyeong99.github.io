@@ -1,7 +1,7 @@
 ---
-title: "[Internship] Build an Agentic RAG System with LangGraph: 1. State"
+title: "[Internship] 1. State: Build an Agentic RAG System with LangGraph"
 date: 2025-10-10 13:15:00 +09:00
-categories: [Internship, AI Workflow Builder]
+categories: [Internship, Agentic RAG System with LangGraph]
 tags: [LangGraph, AI workflow builder, LLM, RAG, RAG Agent, Internship]    
 description: A deep dive into State management, the cornerstone of building a robust Agentic RAG system in LangGraph
 ---
@@ -61,10 +61,10 @@ class BasicState(TypedDict):
 
 ## Type of State Schema
 
-||Single Schema|Explicit Input/Output Schema|Schema|
-|-|-|-|-|
-|Concept|Use the same input and output|Define input and output separately|Inclue prviate schema for internal nodes communication|
-|Description|Every node shares the same state schema|Often useage in API 설계 <br> Separate external data(output/input) and internal data to avoid internal changes affecting external interface|For huge system <br> Optimized schema for each step|
-|Pros|Simple <br> Easy to debug <br> Clear data flow <br> Fast Programming|Capsulized Internal 구현 <br> version management <br> Increased security(Avoid exposing internal data)|Optimized data structure for each step <br> High Modulization  <br> Increasing capability of reusability  <br> Possible independent test for each step| 
-|Cons|With system complexity, unnecessary fields can be created <br> Can be heavy <br> Security Problem|Relatively complicated setting <br> More code lines needed <br> State change logic needed|Sturcture Complexity <br> State change overhead  <br> Possibility of hard debugging|
-|Use Case|Simple chatbot or QA system, Prototype| API (Explicit interface is needed) <br> Linking with the external system <br> Version management|RAG Pipeline  <br> Complicated System with multiple steps  <br> Different data structure for each step  <br> Microservice architecture|
+| Aspect | Single Schema | Explicit I/O Schema | Modular (Node-Specific) Schema |
+| :--- | :--- | :--- | :--- |
+| **Concept** | Uses one unified schema for the entire graph's state. | Defines separate schemas for the graph's public input/output versus its internal state. | Utilizes different, private schemas for communication between various internal nodes or subgraphs. |
+| **Description** | Every node reads from and writes to the same state object structure. | Separates external data from internal data, preventing internal logic changes from affecting the public-facing API. | Employs optimized schemas tailored for specific tasks, allowing different parts of the system to communicate with their own data structures. |
+| **Pros** | • Simple & predictable<br>• Easy to debug<br>• Clear data flow<br>• Rapid prototyping | • Encapsulates internal implementation<br>• Simplifies version management<br>• Enhances security by not exposing the internal state | • Optimized data structures for each step<br>• High modularity<br>• Increased reusability of components<br>• Allows for independent testing of nodes |
+| **Cons** | • Can become bloated with unused fields<br>• State object can become inefficient<br>• Potential security risks from exposing data to all nodes | • More complex initial setup<br>• Requires more boilerplate code<br>• Needs explicit logic to map between schemas | • Increased structural complexity<br>• Overhead from transforming data between schemas<br>• Can be more difficult to debug the end-to-end data flow |
+| **Use Case** | • Simple chatbots or QA systems<br>• Prototypes<br>• Small-scale projects | • Public-facing APIs<br>• Integrating with external systems<br>• Systems requiring careful version control | • Complex RAG pipelines<br>• Multi-step agentic systems<br>• Microservice-style architectures |
