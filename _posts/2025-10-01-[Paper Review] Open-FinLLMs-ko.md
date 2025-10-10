@@ -4,6 +4,8 @@ date: 2025-10-01 18:30:00 +09:00
 categories: [Paper, VLM]
 tags: [Paper Review, Open-FinLLMs, Financial LLM, VLM, LLM-Instruct]     # TAG names should always be lowercase
 description: 금융 특화 생성형 모델 논문 정리
+language: ko
+postid: 8
 ---
 
 # Open-FinLLM
