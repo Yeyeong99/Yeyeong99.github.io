@@ -2,8 +2,8 @@
 title: "[인턴] LangGraph에서 병렬 처리 실행하기"
 date: 2025-12-05 14:50:00 +09:00
 last_modified_at: 2025-12-05 14:50:00 +09:00
-categories: [인턴]
-tags: [인턴], [LangGraph], [Internship]
+categories: [Internship]
+tags: [인턴, LangGraph, Internship, Parallel Processing]
 description: LangGraph에서 특정 노드를 병렬 처리하고 싶을 때
 language: ko
 postid: 11
