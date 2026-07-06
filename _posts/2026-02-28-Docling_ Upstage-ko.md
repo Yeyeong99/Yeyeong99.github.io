@@ -1,7 +1,7 @@
 ---
 title: "[인턴] Docling OCR 파이프라인에서 OCR 엔진 커스텀 하기"
-date: 2025-02-28 14:50:00 +09:00
-last_modified_at: 2025-02-28 14:50:00 +09:00
+date: 2026-02-28 14:50:00 +09:00
+last_modified_at: 2026-02-28 14:50:00 +09:00
 categories: [Internship]
 tags: [인턴, langgraph, internship, docling ocr, ocr, upstage]
 description: "Docling OCR 파이프라인에 기본 엔진 대신 원하는 OCR 모델을 플러그인 형태로 통합하는 방법"
