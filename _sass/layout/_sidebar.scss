@@ -276,8 +276,13 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       }
 
       + .dropdown-menu {
+        display: none;
+        min-width: 10rem;
+        padding: 0.25rem;
+        margin: 0;
+        list-style: none;
         background-color: var(--menu-bg);
-        border-color: var(--menu-border-color);
+        border: 1px solid var(--menu-border-color);
         box-shadow: var(--menu-shadow-color) 0 1px 4px;
         border-radius: 0.75rem !important;
 
@@ -290,10 +295,25 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
           animation: menu-pop 0.2s ease-out;
         }
 
+        > li {
+          list-style: none;
+        }
+
         .dropdown-item {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 0.55rem 1rem;
+          border: 0;
           border-radius: 0.5rem;
+          background-color: transparent;
           color: var(--sidebar-muted-color);
           font-size: 90%;
+          font-family: inherit;
+          line-height: 1.5;
+          text-align: left;
+          white-space: nowrap;
+          cursor: pointer;
 
           &.active {
             font-weight: 600;
@@ -309,7 +329,13 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
             }
           }
 
+          &:focus {
+            outline: 0;
+            box-shadow: none;
+          }
+
           &:active,
+          &:focus-visible,
           &:hover,
           &.active {
             background-color: var(--menu-highlight-bg);
