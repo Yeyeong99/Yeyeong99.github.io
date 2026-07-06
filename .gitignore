@@ -23,11 +23,13 @@ package-lock.json
 !.vscode/tasks.json
 
 # Misc
-<<<<<<< HEAD
-=======
 _sass/vendors
 # assets/js/dist
->>>>>>> 941fd8da44c66d239ae3a4ebfcd5b260895397a6
+
+# Hidden system files
+*~
+.DS_Store
+Thumbs.db
 
 # assets/img/profile.jpg
 /assets/img/profile.jpg
