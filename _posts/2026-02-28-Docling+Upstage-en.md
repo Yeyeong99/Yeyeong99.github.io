@@ -1,7 +1,7 @@
 ---
 title: "[Internship] Customizing the OCR Engine in the Docling OCR Pipeline"
-date: 2025-02-28 14:50:00 +09:00
-last_modified_at: 2025-02-28 14:50:00 +09:00
+date: 2026-02-28 14:50:00 +09:00
+last_modified_at: 2026-02-28 14:50:00 +09:00
 categories: [Internship]
 tags: [Internship, Langgraph, Docling Ocr Pipeline, OCR, Upstage OCR]
 description: How to integrate a custom OCR model into the Docling OCR pipeline as a plugin.
